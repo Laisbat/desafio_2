@@ -45,8 +45,21 @@ yarn server
 
 Em seguida, você vai ver a mensagem:
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9111a286-7fbf-45de-8256-20a1790f3686/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9111a286-7fbf-45de-8256-20a1790f3686/Untitled.png)
+```bash
+$ json-server server.json -p 3333
 
+  \{^_^}/ hi!
+
+  Loading server.json
+  Done
+
+  Resources
+  http://localhost:3333/stock
+  http://localhost:3333/products
+  
+  Home
+  http://localhost:3333
+```
 Perceba que ele iniciou uma fake API com os recursos `/stock` e `/products` em `localhost` na porta `3333` a partir das informações do arquivo [server.json](https://github.com/rocketseat-education/ignite-template-reactjs-criando-um-hook-de-carrinho-de-compras/blob/master/server.json) localizado na raiz do seu projeto. Acessando essas rotas no seu navegador, você consegue ver o retorno das informações já em JSON:
 
 Para acessar a listagem de todos os produtos e estoque, basta realizar uma requisição GET nas rotas `/products` e `/stock` respectivamente. Para acessar os dados de um único item utilize os `route params`, exemplo: `/products/1` e `/stock/1` para acessar os dados do produto e estoque do produto de id 1, respectivamente.
